@@ -29,18 +29,8 @@ class Credito {
     }    
 }
 
-function comprabarCreditoMenorAMax (maxCredito){                                             // comprueba que el monto a sacar sea el correcto 
-    alert('Cual es el monto que desea sacar ?');
-    let creditoAux = comprobarNumero('el monto a sacar');                                // pregunta que de que monto quiere el credito        
-    creditoAux=parseInt(creditoAux);
-    while (creditoAux > maxCredito){
-        alert('Usted no puede sacar mas credito de lo permitido ');
-        alert('El credito maximo que usteded puede sacar es de '+ maxCredito);
-        creditoAux = comprobarNumero('El monto a sacar');                            // pregunta que de que monto quiere el credito            
-        creditoAux=parseInt(creditoAux);
-    }        
-    return creditoAux;
-}
+
+
 
 
 function afectacionMensualPermitida(sueldo,credito){                        //se fija si la cuota no supera el 20% del sueldo en 3 6 o 12 cuotas    
@@ -262,6 +252,8 @@ function cargarArreglo() {
 }
 
 /*                                                                  final de la carga de creditos                        */
+
+
 function buscarCredito (){                                                                                                          // busca un credito en el arreglo
     const getBotonBuscar = document.querySelector("#botonBuscar");
     getBotonBuscar.onclick = (e) =>{
